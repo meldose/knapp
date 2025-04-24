@@ -42,7 +42,12 @@ class ObjectDetector:
             edges = cv2.Canny(blurred, 50, 150)
             dilated = cv2.dilate(edges, None, iterations=2)
 
-            contours, _ = cv2.findContours(dilated, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            gray=cv2.cvtColor(color_image,cv2.COLOR_BAYER_BG2BGR)
+            blurred=cv2.GaussianBlur(gray,(5,5),0)
+            edges=cv2.Canny(blurred,50,150)
+            dilated=cv2.dilate(edges,None,iterations=2)
+            
+            contours,_= cv2.findContours(dilated,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
             valid_contour = None
 
             for contour in contours:

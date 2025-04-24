@@ -52,8 +52,9 @@ def main():
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
             
+            detector.get_focal_length()
             robot_control.check_gripper_status()
-
+ 
             robot_control.move_to_pose(target_pose, speed=0.06)
             print("STARTING THE ROBOT")
             robot_control.move_robot_based_on_angle(yaw_rad=yaw_rad)
