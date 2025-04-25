@@ -25,6 +25,12 @@ class ObjectDetector:
             frames = self.pipeline.wait_for_frames()
             aligned_frames = self.align.process(frames)
 
+            frames =self.pipeline.wait_for_frames()
+            aligned_frames=self.align.process(frames)
+
+            color_frame=aligned_frames.get_color_frame()
+            depth_frame=aligned_frames.get_depth_frame()
+
             color_frame = aligned_frames.get_color_frame()
             depth_frame = aligned_frames.get_depth_frame()
 

@@ -9,7 +9,7 @@ def main():
     r.set_mode("Automatic")
     r.move_joint("New_capture")
 
-    calibration_matrix = r"/home/hrg/Documents/package_detection/cam_to_tcp_transform.npy"
+    calibration_matrix = r"/home/hrg/Documents/knapp/cam_to_tcp_transform.npy"
     detector = ObjectDetector(calibration_matrix)
     robot_control = RobotController()
 
