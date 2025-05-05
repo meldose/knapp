@@ -20,7 +20,7 @@ class Dimension(): # define a class named Dimension
             if camera_coords is not None: # if the camera coordinates are valid
                 points_3d.append(camera_coords[:3])  # Just take X, Y, Z
         
-        if len(points_3d)  4:
+        if len(points_3d):
             return None, None  # Not enough valid points
             
         # Calculate the dimensions using the 3D points
