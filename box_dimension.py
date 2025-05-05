@@ -33,7 +33,7 @@ class Dimension(): # define a class named Dimension
         
         # Calculate width and height based on sorted points
         # This is simplified and may need adjustment for rotated objects
-        if len(sorted_points) = 4:
+        if len(sorted_points) == 4:
             # Calculate diagonal distances
             diag1 = self.calculate_distance_3d(sorted_points[0], sorted_points[3]) # getting the distance
             diag2 = self.calculate_distance_3d(sorted_points[1], sorted_points[2]) # getting the distance
